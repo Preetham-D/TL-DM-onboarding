@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  verification:
+    image: ${DOCKER_REGISTRY}verification
+    build:
+      context: .
+      dockerfile: Verification/Dockerfile

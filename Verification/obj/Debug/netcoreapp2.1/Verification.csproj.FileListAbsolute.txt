@@ -1,0 +1,15 @@
+E:\workspace\Verification\Verification\bin\Debug\netcoreapp2.1\Verification.deps.json
+E:\workspace\Verification\Verification\bin\Debug\netcoreapp2.1\Verification.runtimeconfig.json
+E:\workspace\Verification\Verification\bin\Debug\netcoreapp2.1\Verification.runtimeconfig.dev.json
+E:\workspace\Verification\Verification\bin\Debug\netcoreapp2.1\Verification.dll
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\Verification.csproj.CoreCompileInputs.cache
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\Verification.RazorAssemblyInfo.cache
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\Verification.RazorAssemblyInfo.cs
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\Verification.AssemblyInfoInputs.cache
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\Verification.AssemblyInfo.cs
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\Verification.RazorTargetAssemblyInfo.cache
+E:\workspace\Verification\Verification\bin\Debug\netcoreapp2.1\Verification.pdb
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\Verification.dll
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\Verification.pdb
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\Verification.csprojAssemblyReference.cache
+E:\workspace\Verification\Verification\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
