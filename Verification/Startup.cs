@@ -19,24 +19,43 @@ namespace Verification
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        //public Startup(IConfiguration configuration)
+        //{
+        //    Configuration = configuration;
+        //}
+
+        //public IConfiguration Configuration { get; }
+        public Startup(IConfiguration configuration, IHostingEnvironment environment)
         {
             Configuration = configuration;
+            Environment = environment;
         }
 
         public IConfiguration Configuration { get; }
+        public IHostingEnvironment Environment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connection = @"Server=db;Database=VerificationContext;User=sa;Password=YourStrongP@ssword;";
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<VerificationContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("VerificationContext")));
+            if (Environment.IsEnvironment("Testing"))
+            {
+                //services.AddDbContext<VerificationContext>(options =>
+                //        options.UseSqlServer(Configuration.GetConnectionString("VerificationContext")));
+                services.AddDbContext<VerificationContext>(options =>
+                    options.UseInMemoryDatabase("TestingDB"));
+            }
+            else
+            {
+                services.AddDbContext<VerificationContext>(options =>
+                   options.UseSqlServer(connection));
+            }
             services.AddScoped<IUserOperation , UserOperation>();
         }
 
@@ -56,6 +75,10 @@ namespace Verification
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
+
+            var context = app.ApplicationServices.GetService<VerificationContext>();
+            context.Database.Migrate();
+
             app.UseHttpsRedirection();
             app.UseMvc();
         }
