@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Verification.Model;
 using Verification.Services;
@@ -24,14 +25,28 @@ namespace Verification.Controllers
         }
         // POST: api/Users
         [HttpPost]
-        public  void PostUser([FromBody] string value)
+        public  IActionResult PostUser([FromBody] string value)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
             _userOperation.AddUser(value);
+            return Ok(value);
         }
         [HttpPost("verify")]
-        public async void PostVerify([FromBody] string value)
+        public async Task<IActionResult> PostVerify([FromBody] string value)
         {
-            await _userOperation.Verify(value);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var user = await _userOperation.Verify(value);
+            if(user == null)
+            {
+                return BadRequest();
+            }
+            return Ok(user);
         }
     }
 }

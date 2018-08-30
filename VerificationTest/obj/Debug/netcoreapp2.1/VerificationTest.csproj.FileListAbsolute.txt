@@ -1,0 +1,17 @@
+E:\workspace\Verification\VerificationTest\obj\Debug\netcoreapp2.1\VerificationTest.csprojAssemblyReference.cache
+E:\workspace\Verification\VerificationTest\obj\Debug\netcoreapp2.1\VerificationTest.csproj.CoreCompileInputs.cache
+E:\workspace\Verification\VerificationTest\obj\Debug\netcoreapp2.1\VerificationTest.AssemblyInfoInputs.cache
+E:\workspace\Verification\VerificationTest\obj\Debug\netcoreapp2.1\VerificationTest.AssemblyInfo.cs
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\VerificationTest.deps.json
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\VerificationTest.runtimeconfig.json
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\VerificationTest.runtimeconfig.dev.json
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\VerificationTest.dll
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\Verification.dll
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\Verification.pdb
+E:\workspace\Verification\VerificationTest\obj\Debug\netcoreapp2.1\VerificationTest.csproj.CopyComplete
+E:\workspace\Verification\VerificationTest\bin\Debug\netcoreapp2.1\VerificationTest.pdb
+E:\workspace\Verification\VerificationTest\obj\Debug\netcoreapp2.1\VerificationTest.dll
+E:\workspace\Verification\VerificationTest\obj\Debug\netcoreapp2.1\VerificationTest.pdb

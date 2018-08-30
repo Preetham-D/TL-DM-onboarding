@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MimeKit;
 using System;
 using System.Collections.Generic;
@@ -75,15 +76,23 @@ namespace Verification.Services
 
         public void AddUser(string value)
         {
+            
             string token = SendMail(value);
             User user = new User() { Email = value, Token = token };
             _context.User.Add(user);
              _context.SaveChanges();
+            //return OkResult;
         }
 
         public async Task<User> Verify(string value)
         {
-            return await _context.User.FirstOrDefaultAsync(x => x.Token == value);
+            var user =  await _context.User.FirstOrDefaultAsync(x => x.Token == value);
+            if (user != null)
+            {
+                _context.User.Remove(user);
+                _context.SaveChanges();
+            }
+            return user;
         }
 
         public IEnumerable<User> GetUser()
