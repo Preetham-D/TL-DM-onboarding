@@ -25,7 +25,7 @@ namespace Verification.Controllers
         }
         // POST: api/Users
         [HttpPost]
-        public  IActionResult PostUser([FromBody] string value)
+        public  IActionResult PostUser([FromBody] User value)
         {
             if (!ModelState.IsValid)
             {

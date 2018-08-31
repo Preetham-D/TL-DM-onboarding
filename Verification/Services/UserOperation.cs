@@ -16,7 +16,7 @@ namespace Verification.Services
         IEnumerable<User> GetUser();
 
         //add user and token to data base
-        void AddUser(string value);
+        void AddUser(User value);
 
         //verify user
 
@@ -58,7 +58,7 @@ namespace Verification.Services
             //body
             message.Body = new TextPart("plain")
             {
-                Text = "Welcome to TL;DM your temporaray token is" + token + "shashi says hi"
+                Text = "Welcome to TL;DM your temporaray token is  " + token + " Welcome Aboard!"
             };
 
             //Configure and send email
@@ -74,14 +74,13 @@ namespace Verification.Services
             return token;
         }
 
-        public void AddUser(string value)
+        public void AddUser(User value)
         {
             
-            string token = SendMail(value);
-            User user = new User() { Email = value, Token = token };
+            string token = SendMail(value.Email);
+            User user = new User() { Email = value.Email, Workspace = value.Workspace , Token = token };
             _context.User.Add(user);
              _context.SaveChanges();
-            //return OkResult;
         }
 
         public async Task<User> Verify(string value)

@@ -38,7 +38,8 @@ namespace VerificationTest
         [Fact]
         public void TestPostUser()
         {
-            string value = "anandkumar316@gmail.com";
+            //string value = "anandkumar316@gmail.com";
+            User value = new User() { Email = "anandkumar316@gmail.com" };
             var result = _controller.PostUser(value);
            // Console.Write(result.ToString);
             var resultAsOkObjectResult = result as OkObjectResult;
